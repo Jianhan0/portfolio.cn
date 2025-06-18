@@ -48,6 +48,24 @@
 
 
 
+<!-- 防止图片右键保存与拖动保存 -->
+<style>
+    img {
+        -webkit-user-drag: none;
+        user-drag: none;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('img').forEach(function (img) {
+            img.addEventListener('contextmenu', function (e) {
+                e.preventDefault(); // 禁止右键菜单
+            });
+            img.setAttribute('draggable', 'false'); // 禁止拖动图片
+        });
+    });
+</script>
 
 
   <meta name="generator" content="Hexo 7.3.0"></head>
@@ -202,12 +220,6 @@
                         
                             
                                 <span class="post-tag">
-                                    <a href="/portfolio.cn/tags/3D%E6%A8%A1%E5%9E%8B/">
-                                        3D模型
-                                    </a>
-                                </span>
-                            
-                                <span class="post-tag">
                                     <a href="/portfolio.cn/tags/%E5%AE%9E%E4%BD%93%E5%8C%96%E6%A8%A1%E5%9E%8B/">
                                         实体化模型
                                     </a>
@@ -216,6 +228,12 @@
                                 <span class="post-tag">
                                     <a href="/portfolio.cn/tags/%E6%89%8B%E5%8A%9E%E5%8E%9F%E5%9E%8B/">
                                         手办原型
+                                    </a>
+                                </span>
+                            
+                                <span class="post-tag">
+                                    <a href="/portfolio.cn/tags/3D%E6%A8%A1%E5%9E%8B/">
+                                        3D模型
                                     </a>
                                 </span>
                             

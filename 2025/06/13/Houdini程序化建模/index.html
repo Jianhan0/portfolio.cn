@@ -48,6 +48,24 @@
 
 
 
+<!-- 防止图片右键保存与拖动保存 -->
+<style>
+    img {
+        -webkit-user-drag: none;
+        user-drag: none;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('img').forEach(function (img) {
+            img.addEventListener('contextmenu', function (e) {
+                e.preventDefault(); // 禁止右键菜单
+            });
+            img.setAttribute('draggable', 'false'); // 禁止拖动图片
+        });
+    });
+</script>
 
 
   <meta name="generator" content="Hexo 7.3.0"></head>
@@ -181,7 +199,7 @@
             
                 <div class="icon arrow-right"></div>
                 <div class="post-link">
-                  <a href="/portfolio.cn/2025/06/13/%E6%B8%B8%E6%88%8F%E4%BD%9C%E5%93%81/">Next</a>  
+                  <a href="/portfolio.cn/2025/06/13/%E5%AE%9E%E4%BD%93%E5%8C%96Q%E7%89%88%E6%A8%A1%E5%9E%8B%E4%BB%A5%E5%8F%8A%E9%85%8D%E4%BB%B6/">Next</a>  
                 </div>  
             
         </div>
